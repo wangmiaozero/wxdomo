@@ -1,23 +1,22 @@
 <view class="search">
-  <navigator  url="/pages/search/search">
   <input placeholder="搜索" bindconfirm="bindKeyInput" focus="{{searchShowed}}"
   bindinput="searchChangeHandle" bindconfirm="searchHandle" value="{{foo}}" />
   <icon type="search" size="15"/>
-  </navigator>
 </view>
 
 <view class="cells">
   <navigator class="item" wx:for="{{shops}}" wx:key="id" url="/pages/detail/detail?item={{item.id}}">
-    <image src="{{item.images[0]}}" mode="aspectFill"/>
+    <image src="{{item.albums[0]}}" mode="aspectFill"/>
     <view class="meta">
       <text class="name">{{item.name}}</text>
-      <text class="phone">电话：{{item.phone}}</text>
-      <text class="address">地址：{{item.address}}</text>
-      <text class="hours">营业时间：{{item.businessHours}}</text>
+      <text class="phone">功效：{{item.tags}}</text>
+      <text class="address">介绍：{{item.imtro}}</text>
+      <text class="hours">材料：{{item.ingredients}}</text>
     </view>
     <view class="score">{{item.score}}</view>
   </navigator>
 </view>
 
-<view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
-<view wx:else class="loadmore">客官，没有更多了</view>
+<!-- <view wx:if="{{!hasMore}}" class="loadmore loading">正在加载...</view>
+<view wx:else class="loadmore">没有更多了</view> -->
+

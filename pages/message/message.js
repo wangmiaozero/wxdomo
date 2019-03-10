@@ -19,7 +19,7 @@ Page({
     let caipu= new Promise((resolve,reject)=>{
       wx.request({
         // url:"http://apis.juhe.cn/cook/query.php?menu=红烧肉&key=fd075da6f7c344cbbb8948ce659312ff&dtype=json",
-        url:"http://apis.juhe.cn/cook/query.php?menu=沙拉&key=fd075da6f7c344cbbb8948ce659312ff&dtype=json",
+        url:"https://apis.juhe.cn/cook/query.php?menu=沙拉&key=fd075da6f7c344cbbb8948ce659312ff&dtype=json",
         data:data,
         success:resolve,
         fail:reject
